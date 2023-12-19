@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: developer-iq-etl
+spec:
+  schedule: "0 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+          - name: developer-iq-etl
+            image:  414238480542.dkr.ecr.ap-south-1.amazonaws.com/developer-iq-etl:TAG_PLACEHOLDER

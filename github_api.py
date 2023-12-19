@@ -5,10 +5,6 @@ from time import sleep
 from datetime import datetime, timedelta
 from utils.dynamodb_handler import create_users_table, add_or_update_user, add_or_update_repository, \
     create_repositories_table, create_events_table, add_event
-#
-# # using an access token
-# auth = Auth.Token("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")
-access_token = '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'
 
 import requests
 
