@@ -17,7 +17,7 @@ phases:
     commands:
       # - eksctl create cluster --name developer-iq --region ap-south-1 --node-type t2.micro
       # Update the kubeconfig file
-      - aws eks update-kubeconfig --name developer-iq-etl --region ap-south-1
+      - aws eks update-kubeconfig --name developer-iq --region ap-south-1
       # Generate Kubernetes manifests
       - sed "s/TAG_PLACEHOLDER/$CODEBUILD_RESOLVED_SOURCE_VERSION/" k8configs/deployments.yml | kubectl apply -f -
 
